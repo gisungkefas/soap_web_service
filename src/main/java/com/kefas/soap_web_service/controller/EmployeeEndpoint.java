@@ -1,6 +1,6 @@
 package com.kefas.soap_web_service.controller;
 
-import allapis.springbootsoap.com.*;
+import allapis.soap_web_service.kefas.com.*;
 import com.kefas.soap_web_service.model.Employee;
 import com.kefas.soap_web_service.service.EmployeeService;
 import org.springframework.beans.BeanUtils;

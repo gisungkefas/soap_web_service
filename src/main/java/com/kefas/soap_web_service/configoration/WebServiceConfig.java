@@ -16,7 +16,7 @@ import org.springframework.xml.xsd.XsdSchema;
 @Configuration
 public class WebServiceConfig extends WsConfigurerAdapter {
 
-    @SuppressWarnings({"rawtypes", "unchaked"})
+    @SuppressWarnings({"rawtypes", "unchecked"})
     @Bean
     public ServletRegistrationBean messageDispatcherServlet(ApplicationContext applicationContext){
         MessageDispatcherServlet servlet = new MessageDispatcherServlet();
@@ -25,7 +25,7 @@ public class WebServiceConfig extends WsConfigurerAdapter {
         return new ServletRegistrationBean(servlet, "/allService/*");
     }
 
-    @Bean(name = "employee")
+    @Bean(name = "employees")
     public DefaultWsdl11Definition defaultWsdl11Definition(XsdSchema employeeSchema){
         DefaultWsdl11Definition wsdl11Definition = new DefaultWsdl11Definition();
         wsdl11Definition.setPortTypeName("allServiceSoapHttp");

@@ -15,13 +15,13 @@ import javax.sql.DataSource;
 @EntityScan(basePackages = {"com.kefas.soap_web_service.model"})
 public class DataStoredSetup {
 
-    @Value("${spring.datasource.url")
+    @Value("${spring.datasource.url}")
     String databaseUrl;
 
-    @Value("${soring.datasource.username}")
+    @Value("${spring.datasource.username}")
     String databaseUser;
 
-    @Value("${spring.datasource.password")
+    @Value("${spring.datasource.password}")
     String databasePassword;
 
     @Bean
