@@ -1,6 +1,6 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-           xmlns:tns="http://com.springbootsoap.allapis"
-           targetNamespace="http://com.springbootsoap.allapis"
+           xmlns:tns="http://com.kefas.soap_web_service.allapis"
+           targetNamespace="http://com.kefas.soap_web_service.allapis"
            elementFormDefault="qualified">
 
             <xs:complexType name="employeeInfo">

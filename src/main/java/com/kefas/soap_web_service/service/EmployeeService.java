@@ -5,7 +5,7 @@ import com.kefas.soap_web_service.model.Employee;
 
 public interface EmployeeService {
 
-    void AddEmployee (Employee employee);
+    void addEmployee (Employee employee);
 
     Employee getEmployeeById (long employeeId);
 

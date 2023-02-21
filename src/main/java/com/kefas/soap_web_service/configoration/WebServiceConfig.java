@@ -22,21 +22,21 @@ public class WebServiceConfig extends WsConfigurerAdapter {
         MessageDispatcherServlet servlet = new MessageDispatcherServlet();
         servlet.setApplicationContext(applicationContext);
         servlet.setTransformWsdlLocations(true);
-        return new ServletRegistrationBean(servlet, "allService/*");
+        return new ServletRegistrationBean(servlet, "/allService/*");
     }
 
     @Bean(name = "employee")
     public DefaultWsdl11Definition defaultWsdl11Definition(XsdSchema employeeSchema){
         DefaultWsdl11Definition wsdl11Definition = new DefaultWsdl11Definition();
         wsdl11Definition.setPortTypeName("allServiceSoapHttp");
-        wsdl11Definition.setLocationUri("allService");
-        wsdl11Definition.setTargetNamespace("com.springbootsoap.allapis");
+        wsdl11Definition.setLocationUri("/allService");
+        wsdl11Definition.setTargetNamespace("com.kefas.soap_web_service.allapis");
         wsdl11Definition.setSchema(employeeSchema);
         return wsdl11Definition;
     }
 
     @Bean
-    public XsdSchema employeeSchema(){
+    public XsdSchema studentSchema(){
         return new SimpleXsdSchema(new ClassPathResource("employee.xsd"));
     }
 }

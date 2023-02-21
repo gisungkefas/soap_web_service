@@ -7,13 +7,12 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
-
 import javax.sql.DataSource;
 
 @Configuration
-@EnableJpaRepositories(basePackages = {"com.springbootsoap.repository"})
-@ComponentScan(value = "com.springbootsoap.*")
-@EntityScan(basePackages = {"com.springbootsoap.model"})
+@EnableJpaRepositories(basePackages = {"com.kefas.soap_web_service.repository"})
+@ComponentScan(value = "com.kefas.soap_web_service.*")
+@EntityScan(basePackages = {"com.kefas.soap_web_service.model"})
 public class DataStoredSetup {
 
     @Value("${spring.datasource.url")

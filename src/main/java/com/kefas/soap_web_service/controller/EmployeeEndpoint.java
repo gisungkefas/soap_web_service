@@ -13,7 +13,7 @@ import org.springframework.ws.server.endpoint.annotation.ResponsePayload;
 @Endpoint
 public class EmployeeEndpoint {
 
-    private static final String NAMESPACE_URI = "http://com.springbootrest.allapis";
+    private static final String NAMESPACE_URI = "http://com.kefas.soap_web_service.allapis";
 
     @Autowired
     private EmployeeService employeeService;
@@ -43,7 +43,7 @@ public class EmployeeEndpoint {
 
     @PayloadRoot(namespace = NAMESPACE_URI, localPart = "updateEmployeeRequest")
     @ResponsePayload
-    public UpdateEmployeeResponse updateEmpliyee(@RequestPayload UpdateEmployeeRequest request){
+    public UpdateEmployeeResponse updateEmployee(@RequestPayload UpdateEmployeeRequest request){
         Employee employee = new Employee();
         BeanUtils.copyProperties(request.getEmployeeInfo(), employee);
         employeeService.updateEmployee(employee);
